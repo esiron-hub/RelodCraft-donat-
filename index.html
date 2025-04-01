@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RelodCraft - Игровой сервер</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @keyframes blueFlame {
+            0% { box-shadow: 0 0 8px #00bfff, 0 0 15px #0080ff, 0 0 20px #0040ff; }
+            50% { box-shadow: 0 0 15px #0080ff, 0 0 20px #0040ff, 0 0 25px #0020ff; }
+            100% { box-shadow: 0 0 8px #00bfff, 0 0 15px #0080ff, 0 0 20px #0040ff; }
+        }
+
+        @keyframes redFlame {
+            0% { box-shadow: 0 0 8px #ff4d4d, 0 0 15px #ff1a1a, 0 0 20px #cc0000; }
+            50% { box-shadow: 0 0 15px #ff1a1a, 0 0 20px #cc0000, 0 0 25px #990000; }
+            100% { box-shadow: 0 0 8px #ff4d4d, 0 0 15px #ff1a1a, 0 0 20px #cc0000; }
+        }
+
+        @keyframes purpleFlame {
+            0% { box-shadow: 0 0 8px #8e2de2, 0 0 15px #9c1ed1, 0 0 20px #6a1b9a; }
+            50% { box-shadow: 0 0 15px #9c1ed1, 0 0 20px #6a1b9a, 0 0 25px #4b0072; }
+            100% { box-shadow: 0 0 8px #8e2de2, 0 0 15px #9c1ed1, 0 0 20px #6a1b9a; }
+        }
+
+        body {
+            background: #1a002e;
+            color: #e0e0e0;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            max-width: 1600px;
+            margin: auto;
+        }
+
+        header {
+            background: #3d0066;
+            padding: 30px;
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: white;
+            box-shadow: 0 8px 15px rgba(185, 102, 255, 0.4);
+        }
+
+        .about-server {
+            background-color: #1a002e;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 10px;
+            animation: purpleFlame 3s infinite alternate;
+            color: #fff;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .content {
+            text-align: center;
+            padding: 80px 50px;
+        }
+
+        .shop-section {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .shop-items {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .shop-item {
+            position: relative;
+            background: linear-gradient(45deg, #3d0066, #5a007f, #3d0066);
+            background-size: 200% 200%;
+            animation: blueFlame 3s infinite alternate;
+            padding: 30px;
+            border-radius: 15px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .shop-item:hover {
+            transform: scale(1.05);
+        }
+
+        .shop-item.red {
+            background: linear-gradient(45deg, #ff3333, #ff1a1a, #cc0000);
+            background-size: 200% 200%;
+            animation: redFlame 3s infinite alternate;
+        }
+
+        .shop-item h3 {
+            font-size: 22px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 25px;
+            background: linear-gradient(45deg, #ff3333, #ff9933, #ff3333);
+            background-size: 200% 200%;
+            animation: gradientMove 3s infinite linear;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 10px;
+            transition: 0.3s;
+            border: none;
+        }
+
+        .about-site {
+            background-color: #1a002e;
+            padding: 30px;
+            margin-top: 50px;
+            border-radius: 10px;
+            animation: redFlame 3s infinite alternate;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>RelodCraft - Игровой сервер</header>
+
+    <!-- О сервере -->
+    <div class="about-server">
+        <h2>О сервере</h2>
+        <p>RelodCraft — это уникальный сервер Minecraft с разнообразными игровыми режимами и привилегиями для наших игроков. Присоединяйтесь к нам и станьте частью нашего мира!</p>
+    </div>
+
+    <!-- Магазин донатов -->
+    <div class="shop-section">
+        <h2>Магазин донатов</h2>
+        <div class="shop-items">
+            <div class="shop-item red">
+                <h3>Starter</h3>
+                <p>Цветной ник, 3 сетхома</p>
+                <a href="https://t.me/Reloddonat_bot" class="btn">Купить</a>
+            </div>
+            <div class="shop-item">
+                <h3>VIP</h3>
+                <p>Все привилегии Starter, возможность надевать блоки на голову</p>
+                <a href="https://t.me/Reloddonat_bot" class="btn">Купить</a>
+            </div>
+            <div class="shop-item red">
+                <h3>Premium</h3>
+                <p>Все привилегии VIP, возможность летать в мирных зонах</p>
+                <a href="https://t.me/Reloddonat_bot" class="btn">Купить</a>
+            </div>
+            <div class="shop-item">
+                <h3>Hero</h3>
+                <p>Все привилегии Premium, починка предметов</p>
+                <a href="https://t.me/Reloddonat_bot" class="btn">Купить</a>
+            </div>
+            <div class="shop-item red">
+                <h3>Elite</h3>
+                <p>Все привилегии Hero, бессмертие в мирных зонах</p>
+                <a href="https://t.me/Reloddonat_bot" class="btn">Купить</a>
+            </div>
+            <div class="shop-item">
+                <h3>Supreme</h3>
+                <p>Все привилегии Elite, восстановление сытости</p>
+                <a href="https://t.me/Reloddonat_bot" class="btn">Купить</a>
+            </div>
+            <div class="shop-item red">
+                <h3>Titan</h3>
+                <p>Все привилегии Supreme, возможность видеть ближайших игроков</p>
+                <a href="https://t.me/Reloddonat_bot" class="btn">Купить</a>
+            </div>
+            <div class="shop-item">
+                <h3>Mythic</h3>
+                <p>Все привилегии Titan, возможность телепортироваться к игрокам</p>
+                <a href="https://t.me/Reloddonat_bot" class="btn">Купить</a>
+            </div>
+            <div class="shop-item red">
+                <h3>Legend</h3>
+                <p>Все привилегии Mythic, смена ника</p>
+                <a href="https://t.me/Reloddonat_bot" class="btn">Купить</a>
+            </div>
+            <div class="shop-item">
+                <h3>God</h3>
+                <p>Все привилегии Legend, невидимость</p>
+                <a href="https://t.me/Reloddonat_bot" class="btn">Купить</a>
+            </div>
+            <div class="shop-item red">
+                <h3>Immortal</h3>
+                <p>Все привилегии God, возможность иметь 2 питомцев</p>
+                <a href="https://t.me/Reloddonat_bot" class="btn">Купить</a>
+            </div>
+            <div class="shop-item">
+                <h3>Overlord</h3>
+                <p>Все привилегии Immortal, телепортация всех к себе</p>
+                <a href="https://t.me/Reloddonat_bot" class="btn">Купить</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- О сайте -->
+    <div class="about-site">
+        <h2>О сайте</h2>
+        <p>Наш сайт предоставляет пользователю простой и удобный интерфейс для покупки привилегий и донатных товаров для сервера. Используйте все возможности для улучшения вашего игрового опыта!</p>
+    </div>
+</body>
+</html>
